@@ -1,0 +1,167 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00bcd4;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: url('../images/hero.jpg') no-repeat center/cover;
+  color: #fff;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero .btn:hover {
+  background: #007b8a;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 20px;
+  background: #f4f4f4;
+}
+
+.feature {
+  text-align: center;
+  width: 30%;
+}
+
+/* Portfolio Cards */
+.projects {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+}
+
+.project-card {
+  width: 30%;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Contact Form */
+.contact form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input, .contact textarea, .contact button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact button {
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact button:hover {
+  background: #007b8a;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .features, .projects {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature, .project-card {
+    width: 80%;
+  }
+}
